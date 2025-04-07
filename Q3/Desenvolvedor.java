@@ -5,7 +5,7 @@ public class Desenvolvedor extends Funcionario {
 
     public Desenvolvedor(String nomeFunc, double salarioBaseFunc, double fatorProdutividade) {
         super(nomeFunc, salarioBaseFunc);
-        this.fatorProdutividade = fatorProdutividade;
+        setFatorProdutividade(fatorProdutividade); // Usando o setter para garantir a validação
     }
 
     public double getFatorProdutividade() {

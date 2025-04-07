@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Criando objetos com entrada do usuário
+        // Criando objeto Veiculo com entrada do usuário e tratamento de exceção
         System.out.println("--- Criando Veículo Genérico ---");
         System.out.print("Digite a marca: ");
         String marcaVeiculo = scanner.nextLine();
@@ -15,10 +15,20 @@ public class Main {
         System.out.print("Digite o ano: ");
         int anoVeiculo = scanner.nextInt();
         scanner.nextLine(); // Consumir a quebra de linha deixada pelo nextInt()
-        Veiculo veiculoGenerico = new Veiculo(marcaVeiculo, modeloVeiculo, anoVeiculo);
-        System.out.println("\n--- Veículo Genérico Criado ---");
-        veiculoGenerico.exibirInformacoesVeiculo();
 
+        Veiculo veiculoGenerico = null;
+        try {
+            veiculoGenerico = new Veiculo(marcaVeiculo, modeloVeiculo, anoVeiculo);
+            System.out.println("\n--- Veículo Genérico Criado ---");
+            veiculoGenerico.exibirInformacoesVeiculo();
+        } catch (IllegalArgumentException e) {
+            System.err.println("Erro ao criar Veículo Genérico: " + e.getMessage());
+            veiculoGenerico = new Veiculo(marcaVeiculo, modeloVeiculo, 2000); // Criando com um ano padrão
+            System.out.println("\n--- Veículo Genérico Criado com ano padrão (2000) devido ao erro ---");
+            veiculoGenerico.exibirInformacoesVeiculo();
+        }
+
+        // Criando objeto Carro com entrada do usuário e tratamento de exceção
         System.out.println("\n--- Criando Carro ---");
         System.out.print("Digite a marca: ");
         String marcaCarro = scanner.nextLine();
@@ -29,10 +39,20 @@ public class Main {
         System.out.print("Digite o número de portas: ");
         int numeroPortasCarro = scanner.nextInt();
         scanner.nextLine(); // Consumir a quebra de linha
-        Carro carro = new Carro(marcaCarro, modeloCarro, anoCarro, numeroPortasCarro);
-        System.out.println("\n--- Carro Criado ---");
-        carro.exibirInformacoesVeiculo();
 
+        Carro carro = null;
+        try {
+            carro = new Carro(marcaCarro, modeloCarro, anoCarro, numeroPortasCarro);
+            System.out.println("\n--- Carro Criado ---");
+            carro.exibirInformacoesVeiculo();
+        } catch (IllegalArgumentException e) {
+            System.err.println("Erro ao criar Carro: " + e.getMessage());
+            carro = new Carro(marcaCarro, modeloCarro, 2010, 4); // Criando com valores padrão
+            System.out.println("\n--- Carro Criado com valores padrão devido ao erro ---");
+            carro.exibirInformacoesVeiculo();
+        }
+
+        // Criando objeto Motocicleta com entrada do usuário e tratamento de exceção
         System.out.println("\n--- Criando Motocicleta ---");
         System.out.print("Digite a marca: ");
         String marcaMoto = scanner.nextLine();
@@ -43,11 +63,21 @@ public class Main {
         scanner.nextLine(); // Consumir a quebra de linha
         System.out.print("Digite o tipo de guidão: ");
         String tipoGuidãoMoto = scanner.nextLine();
-        Motocicleta moto = new Motocicleta(marcaMoto, modeloMoto, anoMoto, tipoGuidãoMoto);
-        System.out.println("\n--- Motocicleta Criada ---");
-        moto.exibirInformacoesVeiculo();
 
-        // Testando o método setAno com entrada do usuário e tratamento de exceção
+        Motocicleta moto = null;
+        try {
+            moto = new Motocicleta(marcaMoto, modeloMoto, anoMoto, tipoGuidãoMoto);
+            System.out.println("\n--- Motocicleta Criada ---");
+            moto.exibirInformacoesVeiculo();
+        } catch (IllegalArgumentException e) {
+            System.err.println("Erro ao criar Motocicleta: " + e.getMessage());
+            moto = new Motocicleta(marcaMoto, modeloMoto, 2015, tipoGuidãoMoto); // Tentando criar com ano válido
+            System.out.println("\n--- Motocicleta Criada com ano padrão (2015) devido ao erro ---");
+            moto.exibirInformacoesVeiculo();
+        }
+
+        // Testando o método setAno do Carro com entrada do usuário e tratamento de
+        // exceção
         System.out.println("\n--- Testando setAno do Carro ---");
         System.out.print("Digite um novo ano para o carro: ");
         int novoAnoCarro = scanner.nextInt();
@@ -58,8 +88,8 @@ public class Main {
             System.err.println("Erro ao tentar definir o ano do carro: " + e.getMessage());
         }
 
-        // Testando o método setNumeroDePortas com entrada do usuário e tratamento de
-        // exceção
+        // Testando o método setNumeroDePortas do Carro com entrada do usuário e
+        // tratamento de exceção
         System.out.println("\n--- Testando setNumeroDePortas do Carro ---");
         System.out.print("Digite um novo número de portas para o carro: ");
         int novoNumeroPortasCarro = scanner.nextInt();
@@ -72,11 +102,17 @@ public class Main {
 
         System.out.println("\n--- Informações Finais ---");
         System.out.println("Veículo Genérico:");
-        veiculoGenerico.exibirInformacoesVeiculo();
+        if (veiculoGenerico != null) {
+            veiculoGenerico.exibirInformacoesVeiculo();
+        }
         System.out.println("\nCarro:");
-        carro.exibirInformacoesVeiculo();
+        if (carro != null) {
+            carro.exibirInformacoesVeiculo();
+        }
         System.out.println("\nMotocicleta:");
-        moto.exibirInformacoesVeiculo();
+        if (moto != null) {
+            moto.exibirInformacoesVeiculo();
+        }
 
         scanner.close();
     }

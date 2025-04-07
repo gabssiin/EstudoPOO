@@ -55,6 +55,8 @@ Smartphone: 2 anos de garantia.
 Tablet: 1 ano de garantia (o padrão).
 Crie a classe Loja que mantém uma lista de produtos e tenha um método listarGarantias() para exibir o tempo de garantia de cada produto.
 Crie uma Main para testar e manipular todos os objetos citados anteriormente.
+
+
 Q5: Hierarquia de Contas Bancárias
 
 Neste exercício, vamos implementar um sistema bancário que inclui diferentes tipos de contas e funcionalidades adicionais.
