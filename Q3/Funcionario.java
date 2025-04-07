@@ -42,8 +42,13 @@ public class Funcionario {
         this.salarioBaseFunc = salarioBaseFunc;
     }
 
+    public double calcularSalario() {
+        return salarioBaseFunc;
+    }
+
     public void exibirInformacoesFunc() {
         System.out.println("Nome do funcionário: " + nomeFunc);
         System.out.println("Salario base: " + salarioBaseFunc);
+
     }
 }
