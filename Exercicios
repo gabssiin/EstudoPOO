@@ -1,11 +1,17 @@
 Q1: Hierarquia de Animais
 
+
+
 Crie uma hierarquia básica de classes para representar diferentes tipos de animais.
 
 Crie a classe base Animal com o método som(), que imprime uma mensagem dizendo que o animal emite um som genérico.
 Crie duas subclasses: Cachorro e Gato. Cada uma deve sobrescrever o método som() para emitir o som específico do animal (por exemplo, "O cachorro faz: Au Au").
 Implemente uma classe Zoologico que instancie um cachorro e um gato, e faça cada um emitir seu som chamando o método som().
 Crie uma Main para testar e manipular todos os objetos citados anteriormente.
+
+
+
+
 
 
 Q2: Hierarquia de Veículos
@@ -16,6 +22,12 @@ Criar a classe base Veiculo com os atributos marca, modelo e ano, e um método i
 Criar as subclasses Carro e Motocicleta. Adicione um atributo exclusivo Carro, como numeroDePortas, e outro exclusivo à Motocicleta, como tipoDeGuidão.
 Em ambas as subclasses, sobrescrever o método informacoes() para exibir as informações comuns e específicas de cada veículo.
 Crie uma Main para testar e manipular todos os objetos citados anteriormente.
+
+
+
+
+
+
 Q3: Sistema de Funcionários
 
 Agora, vamos criar um sistema para organizar diferentes tipos de funcionários em uma empresa, incorporando métodos específicos para cada tipo.
@@ -27,7 +39,12 @@ O Desenvolvedor: O salário é o salarioBase multiplicado por um fator de produt
 O Estagiario: O salário é o salarioBase, sem adicionais.
 Implemente a classe Empresa que gerencie uma lista de funcionários e tenha um método calcularFolhaDePagamento() para somar e exibir o salário de cada tipo de funcionário.
 Crie uma Main para testar e manipular todos os objetos citados anteriormente.
+
+
+
+
 Q4: Loja de Produtos Eletrônicos
+
 
 Este Qenvolve uma loja com diferentes tipos de produtos eletrônicos e cálculo de garantia.
 
