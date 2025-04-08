@@ -88,6 +88,7 @@ public class Q1 {
         // Criando instâncias das classes
         Animal animalGenerico = null;
         try {
+            
             animalGenerico = new Animal(); // Cria uma instância da classe Animal
         } catch (Exception e) {
             System.err.println("Erro ao criar animal genérico: " + e.getMessage());
