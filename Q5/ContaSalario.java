@@ -15,26 +15,47 @@ Crie uma Main para testar e manipular todos os objetos citados anteriormente.
 Atenção: Da questão 6 em diante sempre criar uma Main para testar e validar os objetos das classes citadas no enunciado!
 */ 
 
-public class ContaSalario{
+public class ContaSalario extends Conta {
 
-    private int limiteSaque;
+    private int limiteSaques;
 
-    public ContaSalario(){
-    }
-    
-    public ContaSalario(String titular, double saldo, int limiteSaque){
-        super(titular,saldo);
-        this.limiteSaque = limiteSaque;
+    private int saquesRealizados;
+
+    public ContaSalario(String titular, double saldo, int limiteSaques) {
+        super(titular, saldo);
+        this.limiteSaques = limiteSaques;
+        this.saquesRealizados = 0;
     }
 
     public int getLimiteSaque() {
-        return limiteSaque;
+        return limiteSaques;
     }
 
     public void setLimiteSaque(int limiteSaque) {
-        this.limiteSaque = limiteSaque;
+        this.limiteSaques = limiteSaque;
     }
 
-    @Override 
-    public double   
+    public int getLimiteSaques() {
+        return limiteSaques;
+    }
+
+    public int getSaquesRealizados() {
+        return saquesRealizados;
+    }
+
+
+
+    @Override
+    public double sacar(double valor) {
+        if (saquesRealizados < limiteSaques) {
+            if (super.sacar(valor) > 0) {
+                saquesRealizados++;
+                System.out.println("Saque #" + saquesRealizados + " de " + limiteSaques + " permitido na conta salário de " + getTitular());
+                return valor;
+            }
+        } else {
+            System.out.println("Limite de saques mensais atingido na conta salário de " + getTitular() + ".");
+        }
+        return 0;
+    }
 }

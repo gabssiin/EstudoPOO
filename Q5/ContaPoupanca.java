@@ -14,20 +14,18 @@ Crie a classe Banco que gerencia uma lista de contas, com métodos para adiciona
 Crie uma Main para testar e manipular todos os objetos citados anteriormente.
 Atenção: Da questão 6 em diante sempre criar uma Main para testar e validar os objetos das classes citadas no enunciado!
 */ 
-
-public class ContaPoupanca {
-
-
-    public ContaPoupanca(){
-    }
-
-    public ContaPoupanca(String titular, double saldo){
+class ContaPoupanca extends Conta {
+    public ContaPoupanca(String titular, double saldo) {
         super(titular, saldo);
-   
     }
 
-    public double adicionarRendimento(double saldo){
-        saldo =+ saldo * 0.50;
-        return saldo;
+    public void adicionarRendimento(double percentual) {
+        if (percentual > 0) {
+            double rendimento = getSaldo() * (percentual / 100);
+            setSaldo(getSaldo() + rendimento);
+            System.out.println("Rendimento de " + percentual + "% (R$" + rendimento + ") adicionado à conta poupança de " + getTitular() + ". Novo saldo: R$" + getSaldo());
+        } else {
+            System.out.println("Percentual de rendimento inválido.");
+        }
     }
 }

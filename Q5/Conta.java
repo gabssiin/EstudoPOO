@@ -38,9 +38,15 @@ public class Conta {
         this.titular = titular;
     }
 
-    public double depositar(double saldo){
-        return saldo + 100;
+    public void depositar(double valor) {
+        if (valor > 0) {
+            this.saldo += valor;
+            System.out.println("Depósito de R$" + valor + " realizado com sucesso na conta de " + titular + ". Novo saldo: R$" + saldo);
+        } else {
+            System.out.println("Valor de depósito inválido.");
+        }
     }
+
 
     public double sacar(double valor) {
         valor = 100;

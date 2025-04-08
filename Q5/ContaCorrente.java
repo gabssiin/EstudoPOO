@@ -15,21 +15,30 @@ Crie uma Main para testar e manipular todos os objetos citados anteriormente.
 Atenção: Da questão 6 em diante sempre criar uma Main para testar e validar os objetos das classes citadas no enunciado!
 */ 
 
-public class ContaCorrente {
-    public ContaCorrente() {
-        // Construtor padrão
-    }
+public class ContaCorrente extends Conta {
+
+
+    private static final double TAXA_SAQUE = 0.10;
+
+
+
     public ContaCorrente(String titular, double saldo) {
         super(titular, saldo);
     }
+
+
     @Override
-    public double sacar (double valor){
-        if (valor > saldo) {
-            System.out.println("Erro na sua transação");
-            return saldo;
+    public double sacar(double valor) {
+        double valorTotal = valor * (1 + TAXA_SAQUE);
+        if (valor > 0 && valorTotal <= getSaldo()) {
+            setSaldo(getSaldo() - valorTotal);
+            System.out.println("Saque de R$" + valor + " realizado com sucesso na conta corrente de " + getTitular() + " (taxa de 10%: R$" + (valor * TAXA_SAQUE) + "). Novo saldo: R$" + getSaldo());
+            return valor;
+        } else {
+            System.out.println("Erro ao sacar na conta corrente de " + getTitular() + ": saldo insuficiente ou valor inválido (incluindo taxa).");
+            return 0;
         }
-        return saldo =- valor * 0.10;
-        System.out.println("Sua transferência foi concluída com sucesso e com uma taxa de operação de 10%");
     }
-    }          
+}
+
 
