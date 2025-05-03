@@ -1,362 +1,520 @@
+PRIMEIRA LISTA DE EXERCÍCIOS DA UNIDADE 2 
+PROGRAMAÇÃO ORIENTADA A OBJETOS
+
 Q1: Hierarquia de Animais
-
-
-
-Crie uma hierarquia básica de classes para representar diferentes tipos de animais.
-
-Crie a classe base Animal com o método som(), que imprime uma mensagem dizendo que o animal emite um som genérico.
-Crie duas subclasses: Cachorro e Gato. Cada uma deve sobrescrever o método som() para emitir o som específico do animal (por exemplo, "O cachorro faz: Au Au").
-Implemente uma classe Zoologico que instancie um cachorro e um gato, e faça cada um emitir seu som chamando o método som().
-Crie uma Main para testar e manipular todos os objetos citados anteriormente.
-
-
-
-
+Crie uma hierarquia básica de classes para representar diferentes tipos de 
+animais.
+• Crie a classe base Animal com o método som(), que imprime uma 
+mensagem dizendo que o animal emite um som genérico.
+• Crie duas subclasses: Cachorro e Gato. Cada uma deve sobrescrever o 
+método som() para emitir o som específico do animal (por exemplo, "O 
+cachorro faz: Au Au").
+• Implemente uma classe Zoologico que instancie um cachorro e um gato, e 
+faça cada um emitir seu som chamando o método som().
+• Crie uma Main para testar e manipular todos os objetos citados 
+anteriormente.
 
 
 Q2: Hierarquia de Veículos
+Representação da hierarquia de veículos com características comuns e 
+específicas.
+• Criar a classe base Veiculo com os atributos marca, modelo e ano, e um 
+método informacoes() que imprime essas informações.
+• Criar as subclasses Carro e Motocicleta. Adicione um atributo exclusivo 
+Carro, como numeroDePortas, e outro exclusivo à Motocicleta, como 
+tipoDeGuidão.
+• Em ambas as subclasses, sobrescrever o método informacoes() para exibir 
+as informações comuns e específicas de cada veículo.
+• Crie uma Main para testar e manipular todos os objetos citados 
+anteriormente.
 
-Representação da hierarquia de veículos com características comuns e específicas.
 
-Criar a classe base Veiculo com os atributos marca, modelo e ano, e um método informacoes() que imprime essas informações.
-Criar as subclasses Carro e Motocicleta. Adicione um atributo exclusivo Carro, como numeroDePortas, e outro exclusivo à Motocicleta, como tipoDeGuidão.
-Em ambas as subclasses, sobrescrever o método informacoes() para exibir as informações comuns e específicas de cada veículo.
-Crie uma Main para testar e manipular todos os objetos citados anteriormente.
-
-
-
-
-
-
-Q3: Sistema de Funcionários
-
-Agora, vamos criar um sistema para organizar diferentes tipos de funcionários em uma empresa, incorporando métodos específicos para cada tipo.
-
-Crie a classe base Funcionario com os atributos nome, salarioBase e o método calcularSalario(), que retorna o salário base.
-Crie as subclasses Gerente, Desenvolvedor e Estagiario. Cada um terá uma regra própria para calcular o salário:
-O Gerente: O salário é o salarioBase mais um bônus fixo.
-O Desenvolvedor: O salário é o salarioBase multiplicado por um fator de produtividade.
-O Estagiario: O salário é o salarioBase, sem adicionais.
-Implemente a classe Empresa que gerencie uma lista de funcionários e tenha um método calcularFolhaDePagamento() para somar e exibir o salário de cada tipo de funcionário.
-Crie uma Main para testar e manipular todos os objetos citados anteriormente.
-
+• Q3: Sistema de Funcionários
+Agora, vamos criar um sistema para organizar diferentes tipos de funcionários em 
+uma empresa, incorporando métodos específicos para cada tipo.
+• Crie a classe base Funcionario com os atributos nome, salarioBase e o 
+método calcularSalario(), que retorna o salário base.
+• Crie as subclasses Gerente, Desenvolvedor e Estagiario. Cada um terá uma 
+regra própria para calcular o salário:
+o Gerente: O salário é o salarioBase mais um bônus fixo.
+o Desenvolvedor: O salário é o salarioBase multiplicado por um fator 
+de produtividade.
+o Estagiario: O salário é o salarioBase, sem adicionais.
+• Implemente a classe Empresa que gerencie uma lista de funcionários e 
+tenha um método calcularFolhaDePagamento() para somar e exibir o 
+salário de cada tipo de funcionário.
+• Crie uma Main para testar e manipular todos os objetos citados 
+anteriormente.
 
 
 
 Q4: Loja de Produtos Eletrônicos
-
-
-Este Qenvolve uma loja com diferentes tipos de produtos eletrônicos e cálculo de garantia.
-
-Crie a classe base Produto com atributos como nome, preco, e o método calcularGarantia(), que retorna uma garantia padrão de 1 ano.
-Crie as subclasses Computador, Smartphone e Tablet. Cada um deve ter uma implementação própria para calcularGarantia():
-Computador: 3 anos de garantia.
-Smartphone: 2 anos de garantia.
-Tablet: 1 ano de garantia (o padrão).
-Crie a classe Loja que mantém uma lista de produtos e tenha um método listarGarantias() para exibir o tempo de garantia de cada produto.
-Crie uma Main para testar e manipular todos os objetos citados anteriormente.
+Este Qenvolve uma loja com diferentes tipos de produtos eletrônicos e cálculo de 
+garantia.
+• Crie a classe base Produto com atributos como nome, preco, e o método 
+calcularGarantia(), que retorna uma garantia padrão de 1 ano.
+• Crie as subclasses Computador, Smartphone e Tablet. Cada um deve ter 
+uma implementação própria para calcularGarantia():
+o Computador: 3 anos de garantia.
+o Smartphone: 2 anos de garantia.
+o Tablet: 1 ano de garantia (o padrão).
+• Crie a classe Loja que mantém uma lista de produtos e tenha um método 
+listarGarantias() para exibir o tempo de garantia de cada produto.
+• Crie uma Main para testar e manipular todos os objetos citados 
+anteriormente.
 
 
 Q5: Hierarquia de Contas Bancárias
+Neste exercício, vamos implementar um sistema bancário que inclui diferentes 
+tipos de contas e funcionalidades adicionais.
+• Crie a classe base Conta com os atributos titular e saldo, e os métodos 
+depositar() e sacar(), onde o saque verifica se há saldo suficiente.
+• Crie as subclasses ContaCorrente, ContaPoupanca e ContaSalario, cada 
+uma com comportamento distinto:
+o ContaCorrente: Implementa uma taxa de operação em cada saque.
+o ContaPoupanca: Possui um método adicional 
+adicionarRendimento() que incrementa o saldo com um valor 
+percentual de rendimento.
+o ContaSalario: Limita o número de saques mensais.
+• Crie a classe Banco que gerencia uma lista de contas, com métodos para 
+adicionar contas e gerar um relatório com saldo de cada tipo de conta e 
+operações disponíveis.
+• Crie uma Main para testar e manipular todos os objetos citados 
+anteriormente.
+Atenção: Da questão 6 em diante sempre criar uma Main para testar e validar 
+os objetos das classes citadas no enunciado!
 
-Neste exercício, vamos implementar um sistema bancário que inclui diferentes tipos de contas e funcionalidades adicionais.
 
-Crie a classe base Conta com os atributos titular e saldo, e os métodos depositar() e sacar(), onde o saque verifica se há saldo suficiente.
-Crie as subclasses ContaCorrente, ContaPoupanca e ContaSalario, cada uma com comportamento distinto:
-ContaCorrente: Implementa uma taxa de operação em cada saque.
-ContaPoupanca: Possui um método adicional adicionarRendimento() que incrementa o saldo com um valor percentual de rendimento.
-ContaSalario: Limita o número de saques mensais.
-Crie a classe Banco que gerencia uma lista de contas, com métodos para adicionar contas e gerar um relatório com saldo de cada tipo de conta e operações disponíveis.
-Crie uma Main para testar e manipular todos os objetos citados anteriormente.
-Atenção: Da questão 6 em diante sempre criar uma Main para testar e validar os objetos das classes citadas no enunciado!
 
 Q6: Sistema de Pagamento com Métodos de Pagamento
+Implementar um sistema de pagamento que possui diferentes métodos de 
+pagamento, cada um com regras específicas.
+• Classe abstrata: MetodoPagamento
+o Atributos:
+▪ taxa: Double
+o Métodos:
+▪ processarPagamento(valor: Double): Boolean (método 
+abstrato para processar o pagamento, deve retornar true se 
+bem-sucedido e false caso contrário)
+▪ calcularTaxa(valor: Double): Double (Retorna o valor 
+multiplicado pela taxa)
+• Subclasses:
+o CartaoCredito: Sobrescrever processarPagamento(valor: Double): 
+Boolean para incluir uma lógica onde a transação é permitida 
+apenas se a taxa for menor que 0.02.
+o Pix: Sobrescrever processarPagamento(valor: Double): Boolean para 
+processar pagamentos instantâneos sem aplicar taxa.
+o Boleto: Sobrescrever processarPagamento(valor: Double): Boolean 
+para aplicar uma taxa fixa de 5%.
+• Classe utilitária: SistemaPagamento
+o Métodos:
+▪ efetuarPagamento(metodo: MetodoPagamento, valor: 
+Double): Boolean (Chama processarPagamento no método 
+de pagamento fornecido e exibe a taxa aplicada).
 
-Implementar um sistema de pagamento que possui diferentes métodos de pagamento, cada um com regras específicas.
 
-Classe abstrata: MetodoPagamento
-Atributos:
-taxa: Double
-Métodos:
-processarPagamento(valor: Double): Boolean (método abstrato para processar o pagamento, deve retornar true se bem-sucedido e false caso contrário)
-calcularTaxa(valor: Double): Double (Retorna o valor multiplicado pela taxa)
-Subclasses:
-CartaoCredito: Sobrescrever processarPagamento(valor: Double): Boolean para incluir uma lógica onde a transação é permitida apenas se a taxa for menor que 0.02.
-Pix: Sobrescrever processarPagamento(valor: Double): Boolean para processar pagamentos instantâneos sem aplicar taxa.
-Boleto: Sobrescrever processarPagamento(valor: Double): Boolean para aplicar uma taxa fixa de 5%.
-Classe utilitária: SistemaPagamento
-Métodos:
-efetuarPagamento(metodo: MetodoPagamento, valor: Double): Boolean (Chama processarPagamento no método de pagamento fornecido e exibe a taxa aplicada).
 Q7: Sistema de Transporte com Diferentes Tipos de Veículos
+Implementar um sistema de transporte que abrange diferentes tipos de veículos 
+com atributos e métodos específicos.
+• Classe abstrata: Veiculo
+o Atributos:
+▪ capacidade: Int
+▪ velocidadeMaxima: Double
+o Métodos:
+▪ calcularTempo(distancia: Double): Double (Retorna o tempo 
+em horas para percorrer uma distância a velocidadeMaxima)
+▪ tipoDeCombustivel(): String (Método abstrato que retorna o 
+tipo de combustível usado pelo veículo)
+• Subclasses:
+o Carro: Sobrescrever tipoDeCombustivel(): String para retornar 
+"Gasolina".
+o Aviao: Sobrescrever tipoDeCombustivel(): String para retornar 
+"Querosene de aviação".
+o Navio: Sobrescrever tipoDeCombustivel(): String para retornar 
+"Diesel marítimo".
+• Classe utilitária: GestorDeTransporte
+o Métodos:
+▪ calcularViagem(veiculo: Veiculo, distancia: Double): String 
+(Calcula e retorna o tempo de viagem e tipo de combustível 
+para o veículo fornecido).
 
-Implementar um sistema de transporte que abrange diferentes tipos de veículos com atributos e métodos específicos.
 
-Classe abstrata: Veiculo
-Atributos:
-capacidade: Int
-velocidadeMaxima: Double
-Métodos:
-calcularTempo(distancia: Double): Double (Retorna o tempo em horas para percorrer uma distância a velocidadeMaxima)
-tipoDeCombustivel(): String (Método abstrato que retorna o tipo de combustível usado pelo veículo)
-Subclasses:
-Carro: Sobrescrever tipoDeCombustivel(): String para retornar "Gasolina".
-Aviao: Sobrescrever tipoDeCombustivel(): String para retornar "Querosene de aviação".
-Navio: Sobrescrever tipoDeCombustivel(): String para retornar "Diesel marítimo".
-Classe utilitária: GestorDeTransporte
-Métodos:
-calcularViagem(veiculo: Veiculo, distancia: Double): String (Calcula e retorna o tempo de viagem e tipo de combustível para o veículo fornecido).
 Q8: Sistema de Biblioteca com Empréstimo de Materiais
+Implementar um sistema de empréstimo em uma biblioteca que abrange 
+diferentes tipos de materiais com prazos variados.
+• Classe abstrata: MaterialBiblioteca
+o Atributos:
+▪ titulo: String
+▪ prazoDevolucao: Int (em dias)
+o Métodos:
+▪ calcularMulta(diasAtraso: Int): Double (Retorna a multa pelo 
+atraso, multiplicando diasAtraso por um valor fixo de 1.50)
+• Subclasses:
+o Livro: Sobrescrever calcularMulta(diasAtraso: Int): Double para 
+aplicar uma taxa menor de 1.0.
+o Revista: Sobrescrever calcularMulta(diasAtraso: Int): Double para 
+aplicar uma taxa maior de 2.0.
+o DVD: Sobrescrever calcularMulta(diasAtraso: Int): Double para 
+aplicar uma taxa fixa de 5.0, independente dos dias.
+• Classe utilitária: SistemaBiblioteca
+o Métodos:
+▪ registrarEmprestimo(material: MaterialBiblioteca): String 
+(Imprime o título e o prazo de devolução do material).
+▪ calcularMulta(material: MaterialBiblioteca, diasAtraso: Int): 
+Double (Chama o método calcularMulta para calcular o valor 
+da multa).
 
-Implementar um sistema de empréstimo em uma biblioteca que abrange diferentes tipos de materiais com prazos variados.
 
-Classe abstrata: MaterialBiblioteca
-Atributos:
-titulo: String
-prazoDevolucao: Int (em dias)
-Métodos:
-calcularMulta(diasAtraso: Int): Double (Retorna a multa pelo atraso, multiplicando diasAtraso por um valor fixo de 1.50)
-Subclasses:
-Livro: Sobrescrever calcularMulta(diasAtraso: Int): Double para aplicar uma taxa menor de 1.0.
-Revista: Sobrescrever calcularMulta(diasAtraso: Int): Double para aplicar uma taxa maior de 2.0.
-DVD: Sobrescrever calcularMulta(diasAtraso: Int): Double para aplicar uma taxa fixa de 5.0, independente dos dias.
-Classe utilitária: SistemaBiblioteca
-Métodos:
-registrarEmprestimo(material: MaterialBiblioteca): String (Imprime o título e o prazo de devolução do material).
-calcularMulta(material: MaterialBiblioteca, diasAtraso: Int): Double (Chama o método calcularMulta para calcular o valor da multa).
+
 Q9: Sistema de Processamento de Imagens
+Desenvolver um sistema de processamento de imagens que realiza diferentes 
+operações com base no tipo de imagem.
+• Classe abstrata: Imagem
+o Atributos:
+▪ largura: Int
+▪ altura: Int
+o Métodos:
+▪ calcularTamanho(): Int (Retorna o tamanho da imagem em 
+pixels multiplicando largura por altura)
+▪ processar(): String (Método abstrato que define a operação a 
+ser realizada)
+• Subclasses:
+o ImagemColorida: Sobrescrever processar(): String para aplicar um 
+filtro de saturação e retornar uma descrição.
+o ImagemPretoBranco: Sobrescrever processar(): String para 
+converter a imagem em preto e branco e retornar uma descrição.
+o ImagemTransparente: Sobrescrever processar(): String para aplicar 
+uma máscara de transparência e retornar uma descrição.
+• Classe utilitária: EditorImagem
+o Métodos:
+▪ exibirInformacoes(imagem: Imagem): String (Exibe a largura, 
+altura e descrição do processamento da imagem).
+▪ ajustarImagem(imagem: Imagem, novaLargura: Int, 
+novaAltura: Int): Imagem (Ajusta as dimensões e retorna uma 
+nova imagem com as dimensões especificadas).
 
-Desenvolver um sistema de processamento de imagens que realiza diferentes operações com base no tipo de imagem.
 
-Classe abstrata: Imagem
-Atributos:
-largura: Int
-altura: Int
-Métodos:
-calcularTamanho(): Int (Retorna o tamanho da imagem em pixels multiplicando largura por altura)
-processar(): String (Método abstrato que define a operação a ser realizada)
-Subclasses:
-ImagemColorida: Sobrescrever processar(): String para aplicar um filtro de saturação e retornar uma descrição.
-ImagemPretoBranco: Sobrescrever processar(): String para converter a imagem em preto e branco e retornar uma descrição.
-ImagemTransparente: Sobrescrever processar(): String para aplicar uma máscara de transparência e retornar uma descrição.
-Classe utilitária: EditorImagem
-Métodos:
-exibirInformacoes(imagem: Imagem): String (Exibe a largura, altura e descrição do processamento da imagem).
-ajustarImagem(imagem: Imagem, novaLargura: Int, novaAltura: Int): Imagem (Ajusta as dimensões e retorna uma nova imagem com as dimensões especificadas).
 Q10: Sistema de Gestão de Projetos com Papéis de Equipe
+Criar um sistema de gestão de projetos onde diferentes membros de equipe 
+desempenham papéis específicos, cada um com suas responsabilidades.
+• Classe abstrata: MembroEquipe
+o Atributos:
+▪ nome: String
+▪ projeto: String
+o Métodos:
+▪ trabalhar(): String (Método abstrato que define a tarefa do 
+membro da equipe)
+▪ obterDetalhes(): String (Retorna o nome e projeto do 
+membro)
+• Subclasses:
+o Desenvolvedor: Sobrescrever trabalhar(): String para retornar a 
+mensagem "Escrevendo código para o projeto".
+o Designer: Sobrescrever trabalhar(): String para retornar a mensagem 
+"Criando design para o projeto".
+o GerenteDeProjetos: Sobrescrever trabalhar(): String para retornar a 
+mensagem "Coordenando o progresso do projeto".
+• Classe utilitária: GestorProjeto
+o Métodos:
+▪ adicionarMembro(membro: MembroEquipe): Unit (Adiciona 
+um membro à equipe de projeto).
+▪ exibirRelatorio(membro: MembroEquipe): String (Retorna o 
+nome, projeto e tarefa atual do membro).
+▪ listarEquipePorProjeto(projeto: String): List<MembroEquipe> 
+(Retorna todos os membros alocados a um projeto 
+específico).
+Aqui estão cinco exercícios de interfaces, mantendo o mesmo nível de 
+complexidade crescente dos exercícios anteriores.
 
-Criar um sistema de gestão de projetos onde diferentes membros de equipe desempenham papéis específicos, cada um com suas responsabilidades.
 
-Classe abstrata: MembroEquipe
-Atributos:
-nome: String
-projeto: String
-Métodos:
-trabalhar(): String (Método abstrato que define a tarefa do membro da equipe)
-obterDetalhes(): String (Retorna o nome e projeto do membro)
-Subclasses:
-Desenvolvedor: Sobrescrever trabalhar(): String para retornar a mensagem "Escrevendo código para o projeto".
-Designer: Sobrescrever trabalhar(): String para retornar a mensagem "Criando design para o projeto".
-GerenteDeProjetos: Sobrescrever trabalhar(): String para retornar a mensagem "Coordenando o progresso do projeto".
-Classe utilitária: GestorProjeto
-Métodos:
-adicionarMembro(membro: MembroEquipe): Unit (Adiciona um membro à equipe de projeto).
-exibirRelatorio(membro: MembroEquipe): String (Retorna o nome, projeto e tarefa atual do membro).
-listarEquipePorProjeto(projeto: String): List<MembroEquipe> (Retorna todos os membros alocados a um projeto específico).
-Aqui estão cinco exercícios de interfaces, mantendo o mesmo nível de complexidade crescente dos exercícios anteriores.
 
 Q11: Sistema de Mensagens com Diferentes Tipos de Envio
+Implementar um sistema de mensagens que permite o envio de mensagens por 
+diferentes métodos, cada um com uma interface específica.
+• Interface: EnvioMensagem
+o Métodos:
+▪ enviar(mensagem: String): Boolean (Envia uma mensagem e 
+retorna true se enviado com sucesso, false caso contrário)
+▪ obterStatus(): String (Retorna o status da mensagem enviada)
+• Implementações:
+o EnvioEmail: Implementa enviar(mensagem: String): Boolean e 
+obterStatus(): String, simulando o envio de um e-mail.
+o EnvioSMS: Implementa enviar(mensagem: String): Boolean e 
+obterStatus(): String, simulando o envio de um SMS.
+o EnvioWhatsApp: Implementa enviar(mensagem: String): Boolean e 
+obterStatus(): String, simulando o envio de uma mensagem via 
+WhatsApp.
+• Classe utilitária: GestorMensagens
+o Métodos:
+▪ enviarMensagem(envio: EnvioMensagem, mensagem: String): 
+Boolean (Chama o método enviar da implementação de 
+envio e exibe o status da mensagem).
 
-Implementar um sistema de mensagens que permite o envio de mensagens por diferentes métodos, cada um com uma interface específica.
 
-Interface: EnvioMensagem
-Métodos:
-enviar(mensagem: String): Boolean (Envia uma mensagem e retorna true se enviado com sucesso, false caso contrário)
-obterStatus(): String (Retorna o status da mensagem enviada)
-Implementações:
-EnvioEmail: Implementa enviar(mensagem: String): Boolean e obterStatus(): String, simulando o envio de um e-mail.
-EnvioSMS: Implementa enviar(mensagem: String): Boolean e obterStatus(): String, simulando o envio de um SMS.
-EnvioWhatsApp: Implementa enviar(mensagem: String): Boolean e obterStatus(): String, simulando o envio de uma mensagem via WhatsApp.
-Classe utilitária: GestorMensagens
-Métodos:
-enviarMensagem(envio: EnvioMensagem, mensagem: String): Boolean (Chama o método enviar da implementação de envio e exibe o status da mensagem).
+
+
 Q12: Sistema de Descontos com Tipos Diferentes de Estratégias
+Criar um sistema que aplica diferentes estratégias de desconto em um preço 
+base.
+• Interface: EstrategiaDesconto
+o Métodos:
+▪ calcularDesconto(preco: Double): Double (Retorna o valor do 
+desconto aplicado ao preço)
+• Implementações:
+o DescontoFidelidade: Implementa calcularDesconto(preco: Double): 
+Double, aplicando um desconto de 5% para clientes fiéis.
+o DescontoSazonal: Implementa calcularDesconto(preco: Double): 
+Double, aplicando um desconto de 10% em épocas específicas.
+o DescontoPromocional: Implementa calcularDesconto(preco: 
+Double): Double, aplicando um desconto fixo de R$ 20,00 no preço 
+final.
+• Classe utilitária: GestorDeDescontos
+o Métodos:
+▪ aplicarDesconto(estrategia: EstrategiaDesconto, preco: 
+Double): Double (Aplica o desconto e retorna o novo valor).
 
-Criar um sistema que aplica diferentes estratégias de desconto em um preço base.
 
-Interface: EstrategiaDesconto
-Métodos:
-calcularDesconto(preco: Double): Double (Retorna o valor do desconto aplicado ao preço)
-Implementações:
-DescontoFidelidade: Implementa calcularDesconto(preco: Double): Double, aplicando um desconto de 5% para clientes fiéis.
-DescontoSazonal: Implementa calcularDesconto(preco: Double): Double, aplicando um desconto de 10% em épocas específicas.
-DescontoPromocional: Implementa calcularDesconto(preco: Double): Double, aplicando um desconto fixo de R$ 20,00 no preço final.
-Classe utilitária: GestorDeDescontos
-Métodos:
-aplicarDesconto(estrategia: EstrategiaDesconto, preco: Double): Double (Aplica o desconto e retorna o novo valor).
 Q13: Sistema de Pagamento com Diferentes Processadores de Pagamento
+Implementar um sistema de pagamento que utiliza diferentes processadores, 
+cada um com sua própria lógica de processamento.
+• Interface: ProcessadorPagamento
+o Métodos:
+▪ autorizarPagamento(valor: Double): Boolean (Autoriza o 
+pagamento e retorna true se autorizado, false caso contrário)
+▪ processarPagamento(valor: Double): Boolean (Processa o 
+pagamento autorizado)
+• Implementações:
+o ProcessadorCartao: Implementa autorizarPagamento(valor: 
+Double): Boolean e processarPagamento(valor: Double): Boolean, 
+simulando um processo de autorização e pagamento com cartão de 
+crédito.
+o ProcessadorPix: Implementa autorizarPagamento(valor: Double): 
+Boolean e processarPagamento(valor: Double): Boolean, simulando 
+uma autorização instantânea.
+o ProcessadorBoleto: Implementa autorizarPagamento(valor: 
+Double): Boolean e processarPagamento(valor: Double): Boolean, 
+autorizando o pagamento apenas se o valor for superior a 10 reais.
+• Classe utilitária: SistemaPagamento
+o Métodos:
+▪ realizarPagamento(processador: ProcessadorPagamento, 
+valor: Double): Boolean (Executa a autorização e o 
+processamento do pagamento
 
-Implementar um sistema de pagamento que utiliza diferentes processadores, cada um com sua própria lógica de processamento.
 
-Interface: ProcessadorPagamento
-Métodos:
-autorizarPagamento(valor: Double): Boolean (Autoriza o pagamento e retorna true se autorizado, false caso contrário)
-processarPagamento(valor: Double): Boolean (Processa o pagamento autorizado)
-Implementações:
-ProcessadorCartao: Implementa autorizarPagamento(valor: Double): Boolean e processarPagamento(valor: Double): Boolean, simulando um processo de autorização e pagamento com cartão de crédito.
-ProcessadorPix: Implementa autorizarPagamento(valor: Double): Boolean e processarPagamento(valor: Double): Boolean, simulando uma autorização instantânea.
-ProcessadorBoleto: Implementa autorizarPagamento(valor: Double): Boolean e processarPagamento(valor: Double): Boolean, autorizando o pagamento apenas se o valor for superior a 10 reais.
-Classe utilitária: SistemaPagamento
-Métodos:
-realizarPagamento(processador: ProcessadorPagamento, valor: Double): Boolean (Executa a autorização e o processamento do pagamento)
+
 Q14: Sistema de Relatórios com Diferentes Formatos de Exportação
+Desenvolver um sistema de relatórios que pode exportar o conteúdo em 
+diferentes formatos.
+• Interface: ExportadorRelatorio
+o Métodos:
+▪ exportar(titulo: String, conteudo: String): String (Exporta o 
+relatório e retorna uma string confirmando a exportação)
+• Implementações:
+o ExportadorPDF: Implementa exportar(titulo: String, conteudo: 
+String): String, simulando a exportação de um relatório em PDF.
+o ExportadorCSV: Implementa exportar(titulo: String, conteudo: 
+String): String, simulando a exportação de um relatório em formato 
+CSV.
+o ExportadorXML: Implementa exportar(titulo: String, conteudo: 
+String): String, simulando a exportação de um relatório em formato 
+XML.
+• Classe utilitária: SistemaRelatorios
+o Métodos:
+▪ exportarRelatorio(exportador: ExportadorRelatorio, titulo: 
+String, conteudo: String): String (Chama o método exportar 
+para gerar o relatório no formato desejado e retorna a 
+confirmação)
 
-Desenvolver um sistema de relatórios que pode exportar o conteúdo em diferentes formatos.
 
-Interface: ExportadorRelatorio
-Métodos:
-exportar(titulo: String, conteudo: String): String (Exporta o relatório e retorna uma string confirmando a exportação)
-Implementações:
-ExportadorPDF: Implementa exportar(titulo: String, conteudo: String): String, simulando a exportação de um relatório em PDF.
-ExportadorCSV: Implementa exportar(titulo: String, conteudo: String): String, simulando a exportação de um relatório em formato CSV.
-ExportadorXML: Implementa exportar(titulo: String, conteudo: String): String, simulando a exportação de um relatório em formato XML.
-Classe utilitária: SistemaRelatorios
-Métodos:
-exportarRelatorio(exportador: ExportadorRelatorio, titulo: String, conteudo: String): String (Chama o método exportar para gerar o relatório no formato desejado e retorna a confirmação)
+
 Q15: Sistema de Veículos Autônomos com Diferentes Tipos de Controle
+Criar um sistema que controla diferentes tipos de veículos autônomos, cada um 
+com uma interface específica de navegação.
+• Interface: ControleAutonomo
+o Métodos:
+▪ iniciarRota(destino: String): String (Inicia a navegação 
+autônoma para o destino fornecido)
+▪ ajustarVelocidade(velocidade: Double): String (Ajusta a 
+velocidade do veículo e retorna uma confirmação)
+• Implementações:
+o ControleCarro: Implementa iniciarRota(destino: String): String e 
+ajustarVelocidade(velocidade: Double): String, iniciando uma rota e 
+ajustando a velocidade de um carro autônomo.
+o ControleDrone: Implementa iniciarRota(destino: String): String e 
+ajustarVelocidade(velocidade: Double): String, simulando a 
+navegação e ajuste de velocidade de um drone autônomo.
+o ControleNavio: Implementa iniciarRota(destino: String): String e 
+ajustarVelocidade(velocidade: Double): String, ajustando a rota e a 
+velocidade de um navio autônomo.
+• Classe utilitária: SistemaAutonomo
+o Métodos:
+▪ navegar(controle: ControleAutonomo, destino: String, 
+velocidade: Double): String (Chama os métodos para iniciar a 
+rota e ajustar a velocidade no veículo autônomo desejado e 
+retorna a confirmação).
 
-Criar um sistema que controla diferentes tipos de veículos autônomos, cada um com uma interface específica de navegação.
 
-Interface: ControleAutonomo
-Métodos:
-iniciarRota(destino: String): String (Inicia a navegação autônoma para o destino fornecido)
-ajustarVelocidade(velocidade: Double): String (Ajusta a velocidade do veículo e retorna uma confirmação)
-Implementações:
-ControleCarro: Implementa iniciarRota(destino: String): String e ajustarVelocidade(velocidade: Double): String, iniciando uma rota e ajustando a velocidade de um carro autônomo.
-ControleDrone: Implementa iniciarRota(destino: String): String e ajustarVelocidade(velocidade: Double): String, simulando a navegação e ajuste de velocidade de um drone autônomo.
-ControleNavio: Implementa iniciarRota(destino: String): String e ajustarVelocidade(velocidade: Double): String, ajustando a rota e a velocidade de um navio autônomo.
-Classe utilitária: SistemaAutonomo
-Métodos:
-navegar(controle: ControleAutonomo, destino: String, velocidade: Double): String (Chama os métodos para iniciar a rota e ajustar a velocidade no veículo autônomo desejado e retorna a confirmação).
+
 Q16: Sistema de Restaurante com Pratos e Ingredientes
+Implementar um sistema de restaurante que gerencia pratos e seus ingredientes. 
+Cada prato pode ter diferentes tipos de ingredientes, cada um com uma 
+característica específica.
+• Classe abstrata: Ingrediente
+o Atributos:
+▪ nome: String
+▪ quantidade: Double
+o Métodos:
+▪ informar(): String (Método abstrato que retorna uma 
+descrição do ingrediente)
+• Subclasses de Ingrediente:
+o Proteina: Implementa informar() e retorna uma descrição incluindo 
+a quantidade de proteínas em gramas.
+o Carboidrato: Implementa informar() e retorna uma descrição 
+incluindo a quantidade de carboidratos em gramas.
+o Tempero: Implementa informar() e retorna uma descrição específica 
+do tempero.
+• Classe: Prato
+o Atributos:
+▪ nome: String
+▪ ingredientes: ArrayList<Ingrediente>
+o Métodos:
+▪ adicionarIngrediente(ingrediente: Ingrediente): Unit (Adiciona 
+um ingrediente ao prato)
+▪ listarIngredientes(): String (Retorna uma lista dos 
+ingredientes e suas descrições)
+• Interface: Preparo
+o Métodos:
+▪ preparar(): String (Define como o prato será preparado)
+• Implementação do Preparo:
+o PratoSimples: Implementa preparar() para descrever o processo de 
+preparo.
 
-Implementar um sistema de restaurante que gerencia pratos e seus ingredientes. Cada prato pode ter diferentes tipos de ingredientes, cada um com uma característica específica.
 
-Classe abstrata: Ingrediente
-Atributos:
-nome: String
-quantidade: Double
-Métodos:
-informar(): String (Método abstrato que retorna uma descrição do ingrediente)
-Subclasses de Ingrediente:
-Proteina: Implementa informar() e retorna uma descrição incluindo a quantidade de proteínas em gramas.
-Carboidrato: Implementa informar() e retorna uma descrição incluindo a quantidade de carboidratos em gramas.
-Tempero: Implementa informar() e retorna uma descrição específica do tempero.
-Classe: Prato
-Atributos:
-nome: String
-ingredientes: ArrayList<Ingrediente>
-Métodos:
-adicionarIngrediente(ingrediente: Ingrediente): Unit (Adiciona um ingrediente ao prato)
-listarIngredientes(): String (Retorna uma lista dos ingredientes e suas descrições)
-Interface: Preparo
-Métodos:
-preparar(): String (Define como o prato será preparado)
-Implementação do Preparo:
-PratoSimples: Implementa preparar() para descrever o processo de preparo.
+
+
 Q17: Sistema de Biblioteca com Usuários e Empréstimos de Materiais
+Criar um sistema de biblioteca onde cada usuário pode pegar emprestado 
+diferentes tipos de materiais.
+• Classe abstrata: Material
+o Atributos:
+▪ titulo: String
+o Métodos:
+▪ informarMaterial(): String (Método abstrato para descrever o 
+material)
+• Subclasses de Material:
+o Livro: Implementa informarMaterial() para descrever o livro.
+o Revista: Implementa informarMaterial() para descrever a revista.
+o DVD: Implementa informarMaterial() para descrever o DVD.
+• Interface: Emprestavel
+o Métodos:
+▪ emprestar(usuario: Usuario): Boolean (Define a lógica de 
+empréstimo)
+▪ devolver(usuario: Usuario): Boolean (Define a lógica de 
+devolução)
+• Classe: Usuario
+o Atributos:
+▪ nome: String
+▪ materiaisEmprestados: ArrayList<Material>
+o Métodos:
+▪ adicionarMaterial(material: Material): Unit (Associa um 
+material emprestado ao usuário)
+▪ listarMateriaisEmprestados(): String (Retorna uma lista dos 
+materiais emprestados)
 
-Criar um sistema de biblioteca onde cada usuário pode pegar emprestado diferentes tipos de materiais.
 
-Classe abstrata: Material
-Atributos:
-titulo: String
-Métodos:
-informarMaterial(): String (Método abstrato para descrever o material)
-Subclasses de Material:
-Livro: Implementa informarMaterial() para descrever o livro.
-Revista: Implementa informarMaterial() para descrever a revista.
-DVD: Implementa informarMaterial() para descrever o DVD.
-Interface: Emprestavel
-Métodos:
-emprestar(usuario: Usuario): Boolean (Define a lógica de empréstimo)
-devolver(usuario: Usuario): Boolean (Define a lógica de devolução)
-Classe: Usuario
-Atributos:
-nome: String
-materiaisEmprestados: ArrayList<Material>
-Métodos:
-adicionarMaterial(material: Material): Unit (Associa um material emprestado ao usuário)
-listarMateriaisEmprestados(): String (Retorna uma lista dos materiais emprestados)
+
+
 Q18: Sistema de Inventário de Loja com Produtos e Fornecedores
+Desenvolver um sistema de inventário onde cada produto está associado a um 
+fornecedor específico e pode ter diferentes categorias.
+• Classe abstrata: Produto
+o Atributos:
+▪ nome: String
+▪ preco: Double
+o Métodos:
+▪ calcularDesconto(): Double (Método abstrato que retorna um 
+valor de desconto)
+• Subclasses de Produto:
+o Eletronico: Implementa calcularDesconto() aplicando um desconto 
+de 10%.
+o Alimento: Implementa calcularDesconto() aplicando um desconto 
+de 5%.
+o Vestuario: Implementa calcularDesconto() aplicando um desconto 
+de 15%.
+• Interface: Fornecimento
+o Métodos:
+▪ fornecerProduto(produto: Produto): Boolean (Define a lógica 
+de fornecimento do produto)
+• Classe: Fornecedor
+o Atributos:
+▪ nome: String
+▪ produtosFornecidos: ArrayList<Produto>
+o Métodos:
+▪ adicionarProduto(produto: Produto): Unit (Adiciona um 
+produto à lista de produtos fornecidos)
+▪ listarProdutosFornecidos(): String (Lista todos os produtos 
+fornecidos pelo fornecedor)
 
-Desenvolver um sistema de inventário onde cada produto está associado a um fornecedor específico e pode ter diferentes categorias.
 
-Classe abstrata: Produto
-Atributos:
-nome: String
-preco: Double
-Métodos:
-calcularDesconto(): Double (Método abstrato que retorna um valor de desconto)
-Subclasses de Produto:
-Eletronico: Implementa calcularDesconto() aplicando um desconto de 10%.
-Alimento: Implementa calcularDesconto() aplicando um desconto de 5%.
-Vestuario: Implementa calcularDesconto() aplicando um desconto de 15%.
-Interface: Fornecimento
-Métodos:
-fornecerProduto(produto: Produto): Boolean (Define a lógica de fornecimento do produto)
-Classe: Fornecedor
-Atributos:
-nome: String
-produtosFornecidos: ArrayList<Produto>
-Métodos:
-adicionarProduto(produto: Produto): Unit (Adiciona um produto à lista de produtos fornecidos)
-listarProdutosFornecidos(): String (Lista todos os produtos fornecidos pelo fornecedor)
+
+
 Q19: Sistema de Gestão de Times de Projeto com Papéis e Tarefas
+Implementar um sistema de gestão de projetos onde cada membro de uma 
+equipe pode desempenhar diferentes papéis e gerenciar tarefas associadas.
+• Classe abstrata: Tarefa
+o Atributos:
+▪ descricao: String
+o Métodos:
+▪ realizarTarefa(): String (Método abstrato para realizar a tarefa)
+• Subclasses de Tarefa:
+o Desenvolvimento: Implementa realizarTarefa() para uma tarefa de 
+desenvolvimento de software.
+o Design: Implementa realizarTarefa() para uma tarefa de design.
+o Teste: Implementa realizarTarefa() para uma tarefa de testes.
+• Interface: Papel
+o Métodos:
+▪ executarPapel(): String (Define o papel do membro na equipe)
+• Classe: MembroEquipe
+o Atributos:
+▪ nome: String
+▪ papel: Papel
+▪ tarefas: ArrayList<Tarefa>
+o Métodos:
+▪ adicionarTarefa(tarefa: Tarefa): Unit (Associa uma tarefa ao 
+membro da equipe)
+▪ listarTarefas(): String (Lista todas as tarefas do membro)
 
-Implementar um sistema de gestão de projetos onde cada membro de uma equipe pode desempenhar diferentes papéis e gerenciar tarefas associadas.
 
-Classe abstrata: Tarefa
-Atributos:
-descricao: String
-Métodos:
-realizarTarefa(): String (Método abstrato para realizar a tarefa)
-Subclasses de Tarefa:
-Desenvolvimento: Implementa realizarTarefa() para uma tarefa de desenvolvimento de software.
-Design: Implementa realizarTarefa() para uma tarefa de design.
-Teste: Implementa realizarTarefa() para uma tarefa de testes.
-Interface: Papel
-Métodos:
-executarPapel(): String (Define o papel do membro na equipe)
-Classe: MembroEquipe
-Atributos:
-nome: String
-papel: Papel
-tarefas: ArrayList<Tarefa>
-Métodos:
-adicionarTarefa(tarefa: Tarefa): Unit (Associa uma tarefa ao membro da equipe)
-listarTarefas(): String (Lista todas as tarefas do membro)
+
+
+
 Q20: Sistema de Reservas de Transporte com Veículos e Rotas
-
-Implementar um sistema de reservas de transporte onde diferentes veículos podem ser reservados para diferentes rotas.
-
-Classe abstrata: Veiculo
-Atributos:
-modelo: String
-capacidade: Int
-Métodos:
-calcularTempo(distancia: Double): Double (Método abstrato que calcula o tempo para a rota)
-Subclasses de Veiculo:
-Onibus: Implementa calcularTempo(distancia: Double): Double baseado em uma velocidade fixa.
-Carro: Implementa calcularTempo(distancia: Double): Double com uma velocidade específica.
-Moto: Implementa calcularTempo(distancia: Double): Double com uma velocidade mais alta.
-Interface: Reservavel
-Métodos:
-reservar(data: String, rota: Rota): Boolean (Método para reservar o veículo em uma data específica)
-Classe: Rota
-Atributos:
-origem: String
-destino: String
-veiculosDisponiveis: ArrayList<Veiculo>
-Métodos:
-adicionarVeiculo(veiculo: Veiculo): Unit (Associa um veículo à rota)
-listarVeiculos(): String (Lista todos os veículos disponíveis para a rota)
+Implementar um sistema de reservas de transporte onde diferentes veículos 
+podem ser reservados para diferentes rotas.
+• Classe abstrata: Veiculo
+o Atributos:
+▪ modelo: String
+▪ capacidade: Int
+o Métodos:
+▪ calcularTempo(distancia: Double): Double (Método abstrato 
+que calcula o tempo para a rota)
+• Subclasses de Veiculo:
+o Onibus: Implementa calcularTempo(distancia: Double): Double 
+baseado em uma velocidade fixa.
+o Carro: Implementa calcularTempo(distancia: Double): Double com 
+uma velocidade específica.
+o Moto: Implementa calcularTempo(distancia: Double): Double com 
+uma velocidade mais alta.
+• Interface: Reservavel
+o Métodos:
+▪ reservar(data: String, rota: Rota): Boolean (Método para 
+reservar o veículo em uma data específica)
+• Classe: Rota
+o Atributos:
+▪ origem: String
+▪ destino: String
+▪ veiculosDisponiveis: ArrayList<Veiculo>
+o Métodos:
+▪ adicionarVeiculo(veiculo: Veiculo): Unit (Associa um veículo 
+à rota)
+▪ listarVeiculos(): String (Lista todos os veículos disponíveis 
+para a rota)
