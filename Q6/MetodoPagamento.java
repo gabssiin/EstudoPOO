@@ -44,4 +44,11 @@ public abstract class MetodoPagamento {
     public double calcularTaxa(double valor) {
         return valor * this.taxa;
     }
+
+    public double getTaxa() {
+        return taxa;
+    }
+    public void setTaxa(double taxa) {
+        this.taxa = taxa;
+    }
 }

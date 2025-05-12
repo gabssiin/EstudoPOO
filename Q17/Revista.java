@@ -12,4 +12,12 @@ class Revista extends Material {
     public String informarMaterial() {
         return "Revista: " + titulo + " (Edição: " + edicao + ")";
     }
+
+    public String getEdicao() {
+        return edicao;
+    }
+    public void setEdicao(String edicao) {
+        this.edicao = edicao;
+    }
+    
 }

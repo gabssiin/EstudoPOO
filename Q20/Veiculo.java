@@ -21,4 +21,12 @@ public abstract class Veiculo {
     public int getCapacidade() {
         return capacidade;
     }
+
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
 }

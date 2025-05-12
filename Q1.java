@@ -81,60 +81,57 @@ class Zoologico {
     }
 }
 
-// Classe Q1 que contém o método main para executar o programa
 public class Q1 {
-    // Método main, o ponto de entrada do programa
     public static void main(String[] args) {
-        // Criando instâncias das classes
         Animal animalGenerico = null;
         try {
             
-            animalGenerico = new Animal(); // Cria uma instância da classe Animal
+            animalGenerico = new Animal();
         } catch (Exception e) {
             System.err.println("Erro ao criar animal genérico: " + e.getMessage());
-            animalGenerico = null; // Define como null em caso de erro
+            animalGenerico = null; 
         }
 
         Cachorro meuCachorro = null;
         try {
-            meuCachorro = new Cachorro(); // Cria uma instância da classe Cachorro
+            meuCachorro = new Cachorro(); 
         } catch (Exception e) {
             System.err.println("Erro ao criar cachorro: " + e.getMessage());
-            meuCachorro = null; // Define como null em caso de erro
+            meuCachorro = null; 
         }
 
         Gato meuGato = null;
         try {
-            meuGato = new Gato(); // Cria uma instância da classe Gato
+            meuGato = new Gato(); 
         } catch (Exception e) {
             System.err.println("Erro ao criar gato: " + e.getMessage());
-            meuGato = null; // Define como null em caso de erro
+            meuGato = null; 
         }
 
         Zoologico meuZoologico = null;
         try {
-            meuZoologico = new Zoologico(); // Cria uma instância da classe Zoologico
+            meuZoologico = new Zoologico();
         } catch (Exception e) {
             System.err.println("Erro ao criar zoológico: " + e.getMessage());
-            meuZoologico = null; // Define como null em caso de erro
+            meuZoologico = null; 
         }
 
-        // Testando os métodos som()
-        System.out.println("\nTestando sons individuais:"); // Imprime uma mensagem indicando o teste
+        
+        System.out.println("\nTestando sons individuais:");
         if (animalGenerico != null) {
-            animalGenerico.som(); // Chama o método som() do animal genérico
+            animalGenerico.som(); 
         }
         if (meuCachorro != null) {
-            meuCachorro.som(); // Chama o método som() do cachorro
+            meuCachorro.som();
         }
         if (meuGato != null) {
-            meuGato.som(); // Chama o método som() do gato
+            meuGato.som(); 
         }
 
         // Testando o zoológico
-        System.out.println("\nTestando o zoológico:"); // Imprime uma mensagem indicando o teste do zoológico
+        System.out.println("\nTestando o zoológico:");
         if (meuZoologico != null) {
-            meuZoologico.fazerSons(); // Chama o método fazerSons() do zoológico para que os animais façam seus sons
+            meuZoologico.fazerSons(); 
         }
     }
 }

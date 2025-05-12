@@ -14,4 +14,16 @@ public abstract class MembroEquipe {
     public String obterDetalhes() {
         return "Nome: " + nome + ", Projeto: " + projeto;
     }
+    public String getNome() {
+        return nome;
+    }
+    public String getProjeto() {
+        return projeto;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public void setProjeto(String projeto) {
+        this.projeto = projeto;
+    }
 }

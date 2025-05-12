@@ -29,4 +29,18 @@ class Usuario {
         }
         return lista.toString();
     }
+
+
+    public List<Material> getMateriaisEmprestados() {
+        return materiaisEmprestados;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setMateriaisEmprestados(List<Material> materiaisEmprestados) {
+        this.materiaisEmprestados = materiaisEmprestados;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }

@@ -34,4 +34,25 @@ class MembroEquipe {
         }
         return lista.toString();
     }
+
+    public String getNome() {
+        return nome;
+    }
+    public Papel getPapel() {
+        return papel;
+    }
+    public List<Tarefa> getTarefas() {
+        return tarefas;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setPapel(Papel papel) {
+        this.papel = papel;
+    }
+    public void setTarefas(List<Tarefa> tarefas) {
+        this.tarefas = tarefas;
+    }
 }

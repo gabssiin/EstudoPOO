@@ -16,4 +16,20 @@ public abstract class MaterialBiblioteca {
         }
         return diasAtraso * TAXA_PADRAO;
     }
+
+    public int getPrazoDevolucao() {
+        return prazoDevolucao;
+    }
+    public static double getTaxaPadrao() {
+        return TAXA_PADRAO;
+    }
+    public String getTitulo() {
+        return titulo;
+    }
+    public void setPrazoDevolucao(int prazoDevolucao) {
+        this.prazoDevolucao = prazoDevolucao;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 }

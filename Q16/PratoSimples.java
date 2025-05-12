@@ -11,4 +11,11 @@ class PratoSimples implements Preparo {
     public String preparar() {
         return "Preparando o prato simples: " + nomePrato + ". Cozinhar e servir.";
     }
+
+    public String getNomePrato() {
+        return nomePrato;
+    }
+    public void setNomePrato(String nomePrato) {
+        this.nomePrato = nomePrato;
+    }
 }

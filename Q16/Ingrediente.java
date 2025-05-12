@@ -13,4 +13,17 @@ public abstract class Ingrediente {
     }
 
     public abstract String informar();
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public double getQuantidade() {
+        return quantidade;
+    }
+    public void setQuantidade(double quantidade) {
+        this.quantidade = quantidade;
+    }
 }

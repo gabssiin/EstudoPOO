@@ -42,4 +42,17 @@ class Fornecedor implements Fornecimento {
             return false;
         }
     }
+
+    public String getNome() {
+        return nome;
+    }
+    public List<Produto> getProdutosFornecidos() {
+        return produtosFornecidos;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public void setProdutosFornecidos(List<Produto> produtosFornecidos) {
+        this.produtosFornecidos = produtosFornecidos;
+    }
 }

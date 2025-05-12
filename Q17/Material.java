@@ -8,4 +8,12 @@ public abstract class Material {
     }
 
     public abstract String informarMaterial();
+
+    public String getTitulo() {
+        return titulo;
+    }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    
 }

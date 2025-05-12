@@ -42,4 +42,21 @@ class Rota {
     public String getDestino() {
         return destino;
     }
+
+    public List<Veiculo> getVeiculosDisponiveis() {
+        return veiculosDisponiveis;
+    }
+
+    public void setDestino(String destino) {
+        this.destino = destino;
+    }
+
+    public void setOrigem(String origem) {
+        this.origem = origem;
+    }
+
+    public void setVeiculosDisponiveis(List<Veiculo> veiculosDisponiveis) {
+        this.veiculosDisponiveis = veiculosDisponiveis;
+    }
+    
 }

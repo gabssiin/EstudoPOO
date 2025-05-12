@@ -16,5 +16,19 @@ public abstract class Veiculo {
         return distancia / this.velocidadeMaxima;
     }
 
+
+
+    public int getCapacidade() {
+        return capacidade;
+    }
+    public double getVelocidadeMaxima() {
+        return velocidadeMaxima;
+    }
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
+    }
+    public void setVelocidadeMaxima(double velocidadeMaxima) {
+        this.velocidadeMaxima = velocidadeMaxima;
+    }
     public abstract String tipoDeCombustivel();
 }

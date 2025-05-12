@@ -11,4 +11,5 @@ class Onibus extends Veiculo {
     public double calcularTempo(double distancia) {
         return distancia / VELOCIDADE_MEDIA; // Tempo em horas
     }
+
 }

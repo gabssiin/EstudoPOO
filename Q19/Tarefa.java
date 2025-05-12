@@ -8,4 +8,11 @@ public abstract class Tarefa {
     }
 
     public abstract String realizarTarefa();
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 }

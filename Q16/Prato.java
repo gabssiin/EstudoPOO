@@ -28,5 +28,19 @@ class Prato {
             lista.append("- ").append(ingrediente.informar()).append("\n");
         }
         return lista.toString();
+
+    }
+
+    public List<Ingrediente> getIngredientes() {
+        return ingredientes;
+    }
+    public String getNome() {
+        return nome;
+    }
+    public void setIngredientes(List<Ingrediente> ingredientes) {
+        this.ingredientes = ingredientes;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

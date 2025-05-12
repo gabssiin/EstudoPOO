@@ -34,4 +34,6 @@ class RevistaEmprestavel extends Revista implements Emprestavel {
         System.out.println("Erro ao devolver a revista '" + titulo + "' por " + usuario.nome + ".");
         return false;
     }
+
+    
 }

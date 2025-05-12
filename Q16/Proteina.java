@@ -12,4 +12,11 @@ class Proteina extends Ingrediente {
     public String informar() {
         return nome + " (" + quantidade + "g de proteína " + tipo + ")";
     }
+
+    public String getTipo() {
+        return tipo;
+    }
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 }
